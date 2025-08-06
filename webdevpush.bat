@@ -1,13 +1,15 @@
 @echo off
 cd /d "%~dp0"
 
-echo 🔁 Adding all files...
+:: Ask for today's file name
+set /p filename=Enter today's filename (without extension): 
+
+:: Copy main.html to <your filename>.html
+copy main.html %filename%.html
+
+:: Git commands
 git add .
-
-echo 💬 Committing with default message...
-git commit -am "auto update"
-
-echo 🚀 Pushing to GitHub (branch: master)...
+git commit -am "Added %filename%.html"
 git push origin master
 
 pause
