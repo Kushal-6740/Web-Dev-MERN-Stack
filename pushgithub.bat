@@ -1,0 +1,9 @@
+@echo off
+cd /d %~dp0
+echo [Git] Staging files...
+git add .
+echo [Git] Committing...
+git commit -am "Auto update"
+echo [Git] Pushing to GitHub...
+git push origin master
+pause
