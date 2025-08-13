@@ -1,0 +1,87 @@
+<!--Day 3 Forms;
+
+1. attributes for form: method: get/post, action: basically some file,target: blank-- displays file in new page
+                                                                              self-- displays file in same page     
+2. name attr is used for key value pair, the text written in name will be key and value entered by user is the value
+
+3. size is used to determine how many chars will be displayed, maxlength is used to restrict no of chars
+
+4. name vs value diff S
+
+5. textarea S
+
+6. dropdown variations: default,selected,empty bar, empty bar with watermark with dropdown
+
+7. if you click on the text mentioned in label it'll directly take you to corresponding input whereas plain text doesn't
+
+8. required tag makes it essential for user to enter something in the input field
+-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="black" text = "red">
+ 
+    <form method= "get" action="img1.jpg  " target = "_blank">
+     
+    <label for="email">Email</label>
+    <input type="text" id = "email" placeholder ="enter your email" name ="email" size = "20" maxlength = "10" required><br>
+     
+     <label for="password">Password</label>
+     <input type="text" id = "password" placeholder ="enter your password" required><br><br><br>
+     
+     Gender:<br>
+     <input type="radio" name = "gender" value = "Male">Male
+     <input type="radio" name = "gender" value = "Female">Female <br><br><br>
+
+     Qualification: <br>
+     <input type="checkbox" name = "Qual" value = "PhD">PhD
+     <input type="checkbox" name = "Qual" value = "Mtech">Mtech
+     <input type="checkbox" name = "Qual" value = "BE">BE <br><br><br>
+
+    <textarea name="" id=""></textarea><br>
+
+    State: <br>
+
+    <select name="ustate" >
+        <option hidden></option> <!-- nothing will be displayed in defaults-->
+       <option value="KA">Karnataka</option> <!-- default selected attribute-->
+       <option value="TN">Tamilnadu</option>
+       <option value="UK">Uttarkhand</option>
+       <option value="KL">Kerala</option>
+
+</select>
+
+<input type="submit" value="submit"> <!-- submit just submits the entered text to server-->
+
+
+URL: <input type="url" name="website-address"><br><br>
+Number: <input type="number" name = "number" min="1" max="10"><br><br>
+Range: <input type="range" name="volume" min="0" max="100" step><br><br> <!--used to add slidebar-->
+Date: <input type="date" name = "birthday" ><br><br>
+Month: <input type="monthr" name = "birth-time" ><br><br>
+Time: <input type="time" name = "birth-time" ><br><br>
+Week: <input type="week" name = "birth-week" ><br><br>
+Date-time: <input type="datetime-local" name = "birthdayr"><br><br>
+Search-bar:<input type="search" name = "data" placeholder="type"><br><br>
+Color-picker: <input type="color" name = "fav-color" ><br><br>
+
+Telephone: <input type="tel" name = "phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder = "ex:1234567809" ><br><br>
+File: <input type="file" name = "file" accept = ".jpg, .jpeg, .png,.pdf,.ppt,.word"><br><br>
+
+
+<input type="submit" value="submit"><!---->
+<input type="button" value="PESU"> <br><br><!-- button has more usecases-->
+
+  </form>
+</body>
+</html>
